@@ -1,0 +1,32 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<main class="page">
+	<form class="form">
+		<h1 class="form__title">Тип події: Форма</h1>
+
+		<div class="form__group">
+			<label class="form__label" for="username">Ім'я користувача</label>
+			<input class="form__input" type="text" id="username" name="username" required>
+		</div>
+
+		<button class="form__button" type="submit">
+			Submit
+		</button>
+
+		<button class="form__button" type="reset">
+			Reset
+		</button>
+	</form>
+</main>
+
+
+
+
+
+{{!
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/default.hbs має вже структуру HTML
+}}
