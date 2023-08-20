@@ -4,7 +4,7 @@ const changeStateButton =
 // Додати обробник події "click" для кнопки
 changeStateButton.addEventListener('click', () => {
   const newState = { message: 'Новий стан' }
-  history.pushState(newState, '', '/new-page')
+  history.pushState(newState, 'New Page', '/popstate#test')
 
   console.log('Стан змінено:', newState)
 })
@@ -12,10 +12,5 @@ changeStateButton.addEventListener('click', () => {
 // Додати обробник події "popstate" для відстеження змін у стеку історії
 window.addEventListener('popstate', (event) => {
   console.log(event)
-
-  if (event.state) {
-    alert('Змінено на:', event.state.message)
-  } else {
-    alert('Змінено на пустий стан')
-  }
+  console.log(event.state)
 })
