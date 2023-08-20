@@ -1,4 +1,5 @@
 const searchInput = document.getElementById('search')
+const emailInput = document.getElementById('email')
 
 // Обробник події "search"
 searchInput.addEventListener('search', (e) => {
@@ -8,7 +9,7 @@ searchInput.addEventListener('search', (e) => {
 })
 
 // Обробник події "invalid"
-searchInput.addEventListener('invalid', (e) => {
+emailInput.addEventListener('invalid', (e) => {
   console.log(e)
   alert(
     'Введені дані недійсні. Будь ласка, введіть коректні дані.',
