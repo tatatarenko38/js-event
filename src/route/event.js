@@ -152,5 +152,87 @@ router.get('/hash', function (req, res) {
     data: {},
   })
 })
+
+router.get('/mouse', function (req, res) {
+  res.render('mouse', {
+    name: 'mouse',
+    component: [],
+    title: 'Тип події: Взаємодія з мишкою',
+    data: {},
+  })
+})
+
+router.get('/key', function (req, res) {
+  res.render('key', {
+    name: 'key',
+    component: [],
+    title: 'Тип події: Введення з клавіатури',
+    data: {},
+  })
+})
+
+router.get('/pointer', function (req, res) {
+  res.render('pointer', {
+    name: 'pointer',
+    component: [],
+    title: 'Тип події: Покажчик',
+    data: {},
+  })
+})
+
+router.get('/input', function (req, res) {
+  res.render('input', {
+    name: 'input',
+    component: [],
+    title: 'Тип події: Введення даних',
+    data: {},
+  })
+})
+
+router.get('/page-transition', function (req, res) {
+  res.render('page-transition', {
+    name: 'page-transition',
+    component: [],
+    title: 'Тип події: Зміна видимості сторінки',
+    data: {},
+  })
+})
+
+router.get('/wheel', function (req, res) {
+  res.render('wheel', {
+    name: 'wheel',
+    component: [],
+    title: 'Тип події: Прокручування колеса миші',
+    data: {},
+  })
+})
+
+router.get('/touch', function (req, res) {
+  res.render('touch', {
+    name: 'touch',
+    component: [],
+    title: 'Тип події: Взаємодія з сенсорним пристроєм',
+    data: {},
+  })
+})
+
+router.get('/transition', function (req, res) {
+  res.render('transition', {
+    name: 'transition',
+    component: [],
+    title: 'Тип події: CSS-перехід',
+    data: {},
+  })
+})
+
+router.get('/progress', function (req, res) {
+  res.render('progress', {
+    name: 'progress',
+    component: [],
+    title: 'Тип події: Відстеження прогресу',
+    data: {},
+  })
+})
+
 // Підключаємо роутер до бек-енду
 module.exports = router
