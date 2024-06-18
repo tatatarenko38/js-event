@@ -4,6 +4,7 @@ const button = document.querySelector('.form__button')
 document.addEventListener('fullscreenchange', (e) => {
   console.log(e)
 
+  //не дає можливості увійти у повноекранний режим
   alert(
     `Повноекраний режим ${
       document.fullscreenElement !== null
@@ -23,6 +24,14 @@ document.addEventListener('fullscreenerror', (e) => {
 
 // Обробник натискання на кнопку повноекранного режиму
 button.addEventListener('click', () => {
+  //перевірка наявності елемента в повноекранному режимі
+  if (document.fullscreenElement) {
+    // перевіряємо наявність функції exitFullscreen в браузері
+    if (document.exitFullscreen) {
+      document.exitFullscreen
+    }
+  }
+
   const body = document.documentElement
   if (body.requestFullscreen) {
     body.requestFullscreen()
